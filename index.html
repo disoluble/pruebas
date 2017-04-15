@@ -1,0 +1,190 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="ad.size" content="width=300,height=250">
+    <title>HTML5 Standard Banner: 300x250</title>
+</head>
+<style type="text/css">
+    button {
+        opacity: 0;
+        border: none;
+        color: #FFF;
+        cursor: pointer;
+        font-family: Arial, sans-serif;
+        font-size: 12px;
+        outline: none;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        user-select: none;
+    }
+    button:hover,
+    button:active {
+        color: #FAF000;
+    }
+    button:active {
+        font-size: 11px;
+    }
+    .label {
+        color: #0D2A4D;
+        position: absolute;
+        margin-left: 10px;
+        top: 35px;
+    }
+    body {
+        margin: 0px;
+    }
+    #ad {
+        display: block;
+        border: rgb(145, 153, 153) 1px solid;
+        overflow: hidden;
+        width: 298px;
+        height: 248px;
+        -moz-user-select: -moz-none;
+        -khtml-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+    #banner {
+        position: absolute;
+        display: block;
+        width: 298px;
+        height: 248px;
+        overflow: hidden;
+    }
+    .buttons {
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+        top: 0px;
+        left: 0px;
+    }
+    .button {
+        width: 300px;
+        height: 250px;
+    }
+    .label {
+        font-size: 14px;
+        top: 65px;
+    }
+    .collapsed .buttons {
+        bottom: 30px;
+        left: 10px;
+    }
+
+
+   
+
+#fondo1{
+    background-color: #000000;
+    width: 300px;
+    height: 250px;
+  position: absolute;
+    z-index: 1000;
+  animation-duration: 1s;
+  animation-name: fadein;
+
+  animation-iteration-count: 1;
+  animation-direction: alternate;
+  animation-delay: 1s; 
+  
+}
+
+
+/*#fondo2{
+    background-color: #0000ff;
+    width: 300px;
+    height: 250px;
+  
+
+  animation-duration: 1s;
+  animation-name: fadeout;
+  
+  animation-iteration-count: 1;
+  animation-direction: alternate;
+  animation-delay: 2s; 
+  animation-fill-mode: forwards;
+}*/
+
+
+
+
+
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+
+
+  to {
+    opacity: 0;
+  }
+}
+
+
+
+
+</style>
+<body>
+    <div id="ad">
+        <div id="banner">
+            <div class="label"></div>
+            
+            <div id="fondo1"></div>
+            <div id="fondo2"></div>
+            
+            
+
+            <div class="buttons">
+                <button id="clickthrough-button" class="button clickthrough"></button>
+
+                
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+
+ var adDiv;
+
+function initEB() {
+    if (!EB.isInitialized()) {
+        EB.addEventListener(EBG.EventName.EB_INITIALIZED, startAd);
+    } else {
+        startAd();
+    }
+}
+
+function startAd() {
+    adDiv = document.getElementById("ad");
+
+    addEventListeners();
+}
+
+function addEventListeners() {
+    document.getElementById("clickthrough-button").addEventListener("click", clickthrough);
+}
+
+function clickthrough() {
+    EB.clickthrough();
+}
+
+window.addEventListener("load", initEB);
+
+
+</script>
+</html>
