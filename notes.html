@@ -2,25 +2,36 @@
 <head>
 	<title>mis notas</title>
 </head>
-<style type="text/css">
-.{
-	padding: 0px;
-	margin: 0px;
-}
 
-#hola{
-	padding: 0px;
+<style type="text/css">
+
+@import url(https://fonts.googleapis.com/css?family=raleway);
+
+.hola{
+	padding-top: 20px;
+	margin-top: 20px;
+	margin-bottom: 20px;
 	margin: auto;
 	width: 400px;
 	height: 200px;
 	background-color: yellow;
 	text-align: center;
 	vertical-align: center;
+	border:solid;
+	border-width: 1px;
+	border-color: #000000;
 }
 
 p{
-	font-family: arial;
+	font-family: "raleway";
 	font-size: 40px;
+}
+
+#container{
+	width: 600px;
+	height: auto;
+	margin: auto;
+	background-color: grey;
 }
 
 
@@ -28,14 +39,16 @@ p{
 </style>
 <body>
 
-	<div id="hola">
-		<p>hola gonorreas de internet</p>
-	</div>
+	<div id="container">
 
-	<div id="hola">
-		<p>hola gonorreas de internet</p>
-	</div>
+		<div class="hola">
+			<p>hola gonorreas de internet</p>
+		</div>
 
+		<div class="hola">
+			<p>hola gonorreas de internet</p>
+		</div>
+</div>
 
 </body>
 </html>
